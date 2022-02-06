@@ -1,0 +1,114 @@
+<html lang="en">
+    {% load static %}
+<head>
+       <meta charset="utf-8">  
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <link rel="stylesheet" href='{% static "asserts/css/bootstrap.min.css" %}'>
+       <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a href="#" class="navbar-brand"><img src='{% static "asserts/images/logo.jpg" %}'width=35 height=40 alt="logo">
+                Smart Bulb</a>
+        </nav>
+    </header>
+    <div class="container jumbotron ">
+        <h1 class="text text-primary">Smart Bulb</h1>
+        <div class="row">
+            <div class="col-6">
+                <h6>Bulb Status</h6>
+                <h6>Operating Voltage</h6>
+                <h6>Active Hours</h6>
+            </div>
+            <div class="col-6">
+                <h6>{{msg}}</h6>
+                <h6>3.12v</h6>
+                <h6>42</h6>
+            </div>
+        </div>
+        <form method="post" id="bulb">
+            {% csrf_token %}
+        <div class="row">
+            <div class="col-6">
+            
+                <button type="submit"  class="btn btn-success btn-block" name="on">on</button>
+            </div>
+            <div class="col-6">
+                <button type="submit"  class="btn btn-danger btn-block" name="off">off</button>
+            </div>
+        </div>
+        <h5 class="text-muted mt-5">Colours Availability</h5>
+        <div class="row">
+            <div class="col-6">
+                <input type="submit"  class="btn btn-primary btn-block" value="" name="blue"><br>
+                <input type="submit"  class="btn  btn-block" value="" name="white" style="background-color: chartreuse;"><br>
+                <input type="submit"  class="btn  btn-block" value="" name="brown" style="background-color: aqua;"><br>
+            </div>
+            <div class="col-6">
+                <input type="submit"  class="btn btn-warning btn-block" name="yellow" value=""><br>
+                <input type="submit"  class="btn btn-danger btn-block" name="red" value=""><br>
+                <input type="submit"  class="btn  btn-block" value="" name="pink" style="background-color: rgb(226, 43, 134);"><br>
+            </div>
+        </div>
+        </form>
+        
+    </div>
+
+    <center ><p>Designed by sabarishkumar</p></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src='{% static "asserts\js\jquery.min.js" %}' ></script>
+	<script src='{% static "asserts\js\bootstrap.min.js" %}'></script>    
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

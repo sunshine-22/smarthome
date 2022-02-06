@@ -1,0 +1,101 @@
+<html lang="en">
+    {% load static %}
+<head>
+       <meta charset="utf-8">  
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <link rel="stylesheet" href='{% static "asserts/css/bootstrap.min.css" %}'>
+       <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a href="#" class="navbar-brand"><img src='{% static "asserts/images/logo.jpg" %}'width=35 height=40 alt="logo">
+                Smart Bulb</a>
+        </nav>
+    </header>
+    <div class="container jumbotron mt-2">
+        <div class=" text-center">
+            <h3>User-Registration</h3>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="username"><b>Create User Name</b></label>
+                    <input type="text" class="form-control" id="username" name="username"><br>
+                    <label for="name"><b>Enter Name</b></label>
+                    <input type="text" class="form-control" id="name" name="name">
+                    <label for="email"><b>Enter E-mail</b></label>
+                    <input type="text" class="form-control" id="email" name="email">
+                    <label for="password"><b>Create password</b></label>
+                    <input type="text" class="form-control" id="password" name="password">
+                    <p class=" text-danger">*password must be alpha numeric characters</p>
+                    <!--<div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div>-->
+                </div>
+                <div class="row">
+                    {% csrf_token %}
+                 <button type="submit" class="btn btn-success col-5 ml-1">Sign-up</button>
+                 <button type="reset" class="btn btn-danger col-5 ml-5">Reset</button>
+                </div>
+            </form>
+            <p class="alert alert-success h5">{{msg}}</p>
+        </div>
+        <br>
+        <label><b>Alredy have Account?</b></label>  <a href="/register" class="text-primary"><b>Login</b></a>
+        <center ><p>Designed by sabarishkumar</p></center>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src='{% static "asserts\js\jquery.min.js" %}' ></script>
+	<script src='{% static "asserts\js\bootstrap.min.js" %}'></script>    
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
